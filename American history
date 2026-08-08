@@ -1,0 +1,27 @@
+print("""KNOW YOUR HISTORY. 
+To know your unification history press enter""")
+
+input1 = input()
+
+states_of_america = [
+    "Delaware", "Pennsylvania", "New Jersey", "Georgia", "Connecticut",
+    "Massachusetts", "Maryland", "South Carolina", "New Hampshire", "Virginia",
+    "New York", "North Carolina", "Rhode Island", "Vermont", "Kentucky",
+    "Tennessee", "Ohio", "Louisiana", "Indiana", "Mississippi",
+    "Illinois", "Alabama", "Maine", "Missouri", "Arkansas",
+    "Michigan", "Florida", "Texas", "Iowa", "Wisconsin",
+    "California", "Minnesota", "Oregon", "Kansas", "West Virginia",
+    "Nevada", "Nebraska", "Colorado", "North Dakota", "South Dakota",
+    "Montana", "Washington", "Idaho", "Wyoming", "Utah",
+    "Oklahoma", "New Mexico", "Arizona", "Alaska", "Hawaii"
+]
+
+user_choice = input("To know which state joined the federation enter its number (1-50): ")
+
+# Convert string input to integer and adjust for zero-based indexing
+state_index = int(user_choice) - 1
+
+if 0 <= state_index < len(states_of_america):
+    print(f"State #{user_choice} is {states_of_america[state_index]}.")
+else:
+    print("Invalid number! Please enter a number between 1 and 50.")
